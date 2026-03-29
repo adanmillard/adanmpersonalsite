@@ -1,9 +1,13 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import Navbar from '../components/Navbar';
+import ScrollReveal from '../components/ScrollReveal';
 
 export const metadata: Metadata = {
-  title: 'Adam N Personal Website',
-  description: 'Portfolio and contact page',
+  title: 'Adan M | Web Developer',
+  description: 'Portfolio with projects, about section, and contact info',
+  keywords: ['Next.js', 'React', 'TypeScript', 'Portfolio', 'Developer'],
+  authors: [{ name: 'Adan M', url: 'https://github.com/adanmillard' }],
 };
 
 export default function RootLayout({
@@ -13,7 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+        <ScrollReveal />
+      </body>
     </html>
   );
 }
