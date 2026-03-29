@@ -21,11 +21,20 @@ export default function Contact() {
       </section>
 
       <section className="card contact-card">
-        <div>
+        <div className="contact-info">
           <h2>Reach out directly</h2>
-          <p>Email: <a href="mailto:adanmillard@gmail.com">adanmillard@gmail.com</a></p>
-          <p>GitHub: <a href="https://github.com/adanmillard" target="_blank" rel="noreferrer">github.com/adanmillard</a></p>
-          <p>LinkedIn: <a href="https://www.linkedin.com/in/adan-ml" target="_blank" rel="noreferrer">linkedin.com/in/adan-ml</a></p>
+          <div className="contact-item">
+            <span className="contact-label">Email</span>
+            <a href="mailto:adanmillard@gmail.com">adanmillard@gmail.com</a>
+          </div>
+          <div className="contact-item">
+            <span className="contact-label">GitHub</span>
+            <a href="https://github.com/adanmillard" target="_blank" rel="noreferrer">github.com/adanmillard</a>
+          </div>
+          <div className="contact-item">
+            <span className="contact-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/adan-ml" target="_blank" rel="noreferrer">linkedin.com/in/adan-ml</a>
+          </div>
         </div>
 
         <form className="contact-form" onSubmit={handleSubmit}>

@@ -1,16 +1,25 @@
 'use client';
 
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function ScrollReveal() {
+  const pathname = usePathname();
+
   useEffect(() => {
-    const sections = document.querySelectorAll('.scroll-reveal');
+    const sections = Array.from(document.querySelectorAll('.scroll-reveal')) as HTMLElement[];
+    if (sections.length === 0) return;
+
+    sections.forEach((section) => {
+      section.classList.remove('visible');
+    });
+
     const observer = new IntersectionObserver(
-      (entries) => {
+      (entries, obs) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
+            obs.unobserve(entry.target);
           }
         });
       },
@@ -18,8 +27,23 @@ export default function ScrollReveal() {
     );
 
     sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
-  }, []);
+
+    const revealNow = () => {
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          section.classList.add('visible');
+          observer.unobserve(section);
+        }
+      });
+    };
+
+    revealNow();
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [pathname]);
 
   return null;
 }

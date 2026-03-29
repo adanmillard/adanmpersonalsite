@@ -17,7 +17,7 @@ export default function Projects() {
             <strong>Retail Store Launch.</strong> Led the setup and launch of a new retail store from the ground up. Within two months, it was running profitably—driven by strong systems, stock control, and day-to-day execution.
           </li>
           <li>
-            <strong>Warehouse Cost Reduction.</strong> Reviewed supplier contracts and internal processes to identify inefficiencies, leading to a $5,000 annual cost reduction without sacrificing performance.
+            <strong>Warehouse Cost Reduction.</strong> Reviewed supplier contracts and internal processes to identify inefficiencies, leading to a <span className="highlight-amount">$5,000</span> annual cost reduction without sacrificing performance.
           </li>
           <li>
             <strong>Team & Workflow Improvements.</strong> Built a more collaborative and accountable warehouse environment by improving communication, structure, and day-to-day processes.
@@ -47,9 +47,7 @@ export default function Projects() {
             <strong>Ongoing Learning Projects.</strong> Regularly build smaller projects to test ideas, learn new tools, and improve how I structure and write code.
           </li>
         </ul>
-        <p>
-          👉 You can check out my work here: <a href="https://github.com/adanmillard" target="_blank" rel="noreferrer">github.com/adanmillard</a>
-        </p>
+        <a href="https://github.com/adanmillard" target="_blank" rel="noreferrer" className="project-cta">You can check out my work here</a>
       </section>
 
       <section className="card">

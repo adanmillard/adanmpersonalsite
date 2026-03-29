@@ -1,4 +1,4 @@
-import Navbar from '../components/Navbar';
+import Link from 'next/link';
 
 export default function Home() {
   const operationProjects = [
@@ -25,17 +25,15 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
-
       <main>
-        <section className="hero scroll-reveal">
+        <section className="hero home-hero scroll-reveal">
           <div className="hero-content">
             <div className="hero-eyebrow">Work / Story</div>
             <h1 className="hero-title">High-impact operations and software work, crafted with precision.</h1>
             <p className="hero-desc">Warm editorial design interwoven with practical systems thinking. I build for the people doing the job, not just the code.</p>
             <div className="cta-row">
-              <a href="/about" className="btn primary">About me</a>
-              <a href="/projects" className="btn ghost">See Projects</a>
+              <Link href="/about" className="btn primary">About me</Link>
+              <Link href="/projects" className="btn ghost">See Projects</Link>
             </div>
           </div>
 

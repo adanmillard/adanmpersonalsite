@@ -13,7 +13,7 @@ export default function About() {
       <section className="card">
         <h2>Background</h2>
         <p>
-          My career hasn’t been a straight line, and I think that’s a strength. I’ve spent time deep in operations—running warehouses, managing people, solving day-to-day problems—and I’ve also trained and worked in software development. What I’ve realised is that I enjoy being somewhere in the middle: where real-world problems meet smart, practical solutions.
+          My career hasn’t been a straight line, and I think that’s a strength. I’ve spent time deep in operations—running warehouses, managing people, solving day-to-day problems—and I’ve also trained and worked in software development. What I’ve realised is that I enjoy being <em>somewhere in the middle</em>: where real-world problems meet smart, practical solutions.
         </p>
         <div className="placeholder-images">
           <img src="https://via.placeholder.com/420x280?text=Me" alt="Placeholder image of Adan" />
@@ -39,7 +39,7 @@ export default function About() {
       <section className="card">
         <h2>Current Focus</h2>
         <p>
-          These days, I’m focused on creating, learning, and putting myself in positions where I can keep growing. I’m big on continuous improvement—whether that’s in work, skills, or just how I approach challenges.
+          These days, I’m focused on creating, learning, and putting myself in positions where I can keep growing. I’m big on <em>continuous improvement</em>—whether that’s in work, skills, or just how I approach challenges.
         </p>
         <p>
           Outside of work, I’m probably diving into new ideas, chasing goals, or finding ways to get better at whatever I’m currently obsessed with.
